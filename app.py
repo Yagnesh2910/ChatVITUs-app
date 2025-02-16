@@ -190,7 +190,8 @@ def ask():
         else:
             response = "Sorry, I didn't understand that."
     
-    mongo_backend_url = "http://localhost:4000/chats/storeMessage"
+    # mongo_backend_url = "http://localhost:4000/chats/storeMessage"
+    mongo_backend_url = "https://chatvitus-backend.onrender.com/chats/storeMessage"
     chat_data = {
         "user_id": user_id, 
         "messages": [
