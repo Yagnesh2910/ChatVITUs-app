@@ -1,0 +1,10 @@
+hello = Hey there! How can I help you?
+where is VIT = The VIT University is in Vellore
+location of college = The VIT University is in Vellore
+what are the courses offered = BTech, MTech, Integrated MTech
+what is the pass criteria in examination = Need 40 in FAT and 50 overall
+what is ffcs = FFCS is short for Fully Flexible Credit System which is the subject seletion for each semester
+how to select subjects in a semester = FFCS is short for Fully Flexible Credit System which is the subject seletion for each semester
+credits limit in ffcs = Minimum of 16 and maximum of 27
+How many credits can be taken during ffcs = Minimum of 16 and maximum of 27
+thank you = you are welcome!
