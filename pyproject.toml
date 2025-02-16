@@ -10,6 +10,11 @@ packages = [{include = "chatvitus"}]
 python = ">=3.9"
 flask = ">=3.1.0,<4.0.0"
 python-levenshtein = "^0.26.1"
+flask-cors = "^5.0.0"
+sentence-transformers = "^3.4.1"
+fuzzywuzzy = "^0.18.0"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.13.3"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
