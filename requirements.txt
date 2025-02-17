@@ -1,6 +1,6 @@
 Flask==2.3.2
 Flask-Cors==3.0.10
-sentence-transformers==2.2.0
+sentence-transformers>=2.2.0
 fuzzywuzzy==0.18.0
 python-Levenshtein==0.21.0
 requests>=2.31
