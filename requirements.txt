@@ -162,7 +162,7 @@ python-json-logger==2.0.7
 python-Levenshtein==0.26.1
 pytz==2023.3
 pywin32-ctypes==0.2.3
-pywinpty==2.0.13
+pywinpty; sys_platform == "win32"
 PyYAML==6.0.1
 pyzmq==24.0.1
 RapidFuzz==3.11.0
