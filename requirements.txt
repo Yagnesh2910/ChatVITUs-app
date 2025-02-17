@@ -126,7 +126,7 @@ networkx==3.2.1
 nltk==3.9.1
 notebook==7.1.2
 notebook_shim==0.2.4
-numpy==1.21.6 
+numpy==1.24.4
 opencv-python==4.9.0.80
 opt-einsum==3.3.0
 optree==0.13.1
