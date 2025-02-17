@@ -7,4 +7,4 @@ requests>=2.31
 beautifulsoup4==4.12.2
 gunicorn
 uvicorn
-huggingface_hub>=0.16.0
+huggingface_hub>=0.14.0
