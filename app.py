@@ -8,7 +8,6 @@ from bs4 import BeautifulSoup
 from Levenshtein import distance as levenshtein_distance
 from fuzzywuzzy import process
 import os
-from functools import lru_cache
 
 
 app = Flask(__name__)
@@ -96,13 +95,8 @@ custom_responses = load_responses_from_file("custom_responses.txt")
 stored_prompts = list(custom_responses.keys())
 stored_prompt_embeddings = model.encode(stored_prompts, convert_to_tensor=True)
 
-@lru_cache(maxsize=1)
-def get_model():
-    return SentenceTransformer("all-MiniLM-L6-v2")
-
 @app.route('/ask', methods=['POST'])
 def ask():
-    model = get_model()
     user_query = request.json.get('query').lower()
     user_query = correct_spelling(user_query, campus_finding_intents + course_list_intents)
     user_id = request.json.get('user_id', None) 
