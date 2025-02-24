@@ -14,7 +14,7 @@ app = Flask(__name__)
 # CORS(app)
 CORS(app, origins=["https://chat-vit-us-frontend.vercel.app"])
 
-# model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
 campus_finding_intents = [
     "which campus offers 'x' course", "which campus offers b.tech 'x'", "which campus offers b.tech 'x' engineering", "in which campus 'x' course is available",
