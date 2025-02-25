@@ -102,8 +102,13 @@ custom_responses = load_responses_from_file("custom_responses.txt")
 stored_prompts = list(custom_responses.keys())
 stored_prompt_embeddings = model.encode(stored_prompts, convert_to_tensor=True)
 
-@app.route('/ask', methods=['POST'])
+@app.route('/ask', methods=['POST','OPTIONS'])
 def ask():
+    if request.method == 'OPTIONS':  # Handle preflight request
+        # No need to return any data, just the headers
+        response = jsonify({'message': 'Preflight request successful'})  # Or an empty response
+        return response, 200
+        
     user_query = request.json.get('query').lower()
     user_query = correct_spelling(user_query, campus_finding_intents + course_list_intents)
     user_id = request.json.get('user_id', None) 
