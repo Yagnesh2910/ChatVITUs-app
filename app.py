@@ -12,8 +12,8 @@ import os
 
 app = Flask(__name__)
 # CORS(app)
-# CORS(app, origins=["https://chat-vit-us-frontend.vercel.app"])
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, origins=["https://chat-vit-us-frontend.vercel.app"])
+# CORS(app, resources={r"/*": {"origins": "*"}})
 
 # model = SentenceTransformer("all-MiniLM-L6-v2")
 model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
@@ -210,4 +210,4 @@ def ask():
     return jsonify({'response': response})
 
 if(__name__== '__main__'):
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 10000)))
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
