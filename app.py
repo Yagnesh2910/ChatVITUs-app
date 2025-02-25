@@ -14,7 +14,11 @@ app = Flask(__name__)
 # CORS(app)
 # CORS(app, origins=["https://chat-vit-us-frontend.vercel.app"])
 # CORS(app, resources={r"/*": {"origins": "*"}})
-CORS(app, resources={r"/*": {"origins": "https://chat-vit-us-frontend.vercel.app", "https://chat-vit-us-frontend.vercel.app/home"}})
+CORS(app, resources={r"/*": {
+    "origins": "https://chat-vit-us-frontend.vercel.app",
+    "methods": ["POST"],  # Or ["GET", "POST"] if needed
+    "headers": ["Content-Type"] # If you're sending Content-Type header
+}})
 
 # model = SentenceTransformer("all-MiniLM-L6-v2")
 model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
